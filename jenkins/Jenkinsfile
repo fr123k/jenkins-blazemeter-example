@@ -1,0 +1,11 @@
+node('master'){
+    stage('Blazemeter') {
+        blazeMeterTest(
+            credentialsId: 'blazemeter-credentials',
+            getJtl: true,
+            getJunit: true,
+            testId: '7868239.taurus',
+            workspaceId: '452862'
+        )
+    }
+}
